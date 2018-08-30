@@ -13,7 +13,7 @@ class GradleArgsTest {
 
     @Test
     void simpleTest() {
-        Optional<GradleArgs> parsed = GradleArgs_Parser.parse(new String[]{"clean", "build"}, System.out);
+        Optional<GradleArgs> parsed = GradleArgs_Parser.create().parse(new String[]{"clean", "build"});
         assertTrue(parsed.isPresent());
         assertThat(parsed.get().operations(), is(Arrays.asList("clean", "build")));
     }

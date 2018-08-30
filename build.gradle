@@ -1,9 +1,11 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group 'com.github.h908714124'
 version '1.0-SNAPSHOT'
+
+mainClassName = "de.h90.example.Main"
 
 sourceCompatibility = 1.8
 
@@ -13,11 +15,9 @@ repositories {
 
 dependencies {
     def junitVersion = '5.2.0'
-    compile 'org.apache.logging.log4j:log4j-core:2.2'
-    compile 'org.apache.logging.log4j:log4j-api:2.2'
     testCompile('org.junit.jupiter:junit-jupiter-api:' + junitVersion)
     testCompile('org.junit.jupiter:junit-jupiter-params:' + junitVersion)
     testRuntime('org.junit.jupiter:junit-jupiter-engine:' + junitVersion)
     testCompile('org.hamcrest:hamcrest-library:1.3')
-    compileOnly 'com.github.h908714124:jbock:2.3.2'
+    compileOnly 'com.github.h908714124:jbock:2.4.1'
 }

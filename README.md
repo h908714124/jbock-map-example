@@ -1,5 +1,11 @@
 # jbock gradle test
 
-Tested with gradle 4.7. Run test as follows:
+Tested with gradle 4.10
 
-    gradle clean test
+````sh
+gradle clean distTar
+cd build/distributions/
+tar xf jbock-gradle-example-1.0-SNAPSHOT.tar
+cd jbock-gradle-example-1.0-SNAPSHOT/bin
+./jbock-gradle-example foo bar
+````
