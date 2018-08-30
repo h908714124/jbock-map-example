@@ -1,0 +1,15 @@
+plugins {
+    id 'application'
+}
+
+mainClassName = "de.h90.example.Main"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':codegen')
+}

@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id 'net.ltgt.apt' version '0.10'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    def jbock = 'com.github.h908714124:jbock:2.4.2'
+    apt jbock
+    compileOnly jbock
+}
