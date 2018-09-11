@@ -10,7 +10,7 @@ repositories {
 sourceCompatibility = 1.8
 
 dependencies {
-    def jbock = 'com.github.h908714124:jbock:2.5.0'
+    def jbock = 'com.github.h908714124:jbock:2.5.1'
     annotationProcessor jbock
     compileOnly jbock
 }
