@@ -5,9 +5,7 @@ Tested with gradle 4.10
 ## build and run
 
 ````sh
-gradle clean
-cd core/
-gradle run --args 'foo bar'
+gradle clean run --args 'foo bar'
 ````
 
 ## Configure IDEA
