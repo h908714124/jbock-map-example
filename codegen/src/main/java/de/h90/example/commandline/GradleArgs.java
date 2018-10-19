@@ -8,6 +8,6 @@ import java.util.List;
 @CommandLineArguments
 public abstract class GradleArgs {
 
-  @PositionalParameter
+  @PositionalParameter(repeatable = true)
   public abstract List<String> operations();
 }
