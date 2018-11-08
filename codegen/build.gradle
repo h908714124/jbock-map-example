@@ -9,6 +9,6 @@ repositories {
 sourceCompatibility = 1.8
 
 dependencies {
-    annotationProcessor 'com.github.h908714124:jbock:2.6.1'
+    annotationProcessor 'com.github.h908714124:jbock:2.6.2'
     compileOnly 'com.github.h908714124:jbock-annotations:2.2'
 }
