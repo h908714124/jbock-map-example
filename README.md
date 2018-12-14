@@ -1,6 +1,6 @@
 # jbock gradle test
 
-Tested with gradle 4.10
+Tested with these gradle versions: `4.10`, `5.0`
 
 ## build and run
 
