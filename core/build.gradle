@@ -1,5 +1,5 @@
 plugins {
-    id 'application'
+    id "application"
 }
 
 mainClassName = "de.h90.example.Main"
@@ -11,5 +11,5 @@ repositories {
 }
 
 dependencies {
-    compile project(':codegen')
+    compile project(":codegen")
 }

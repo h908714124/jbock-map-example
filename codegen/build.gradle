@@ -1,14 +1,13 @@
 plugins {
-    id 'java'
+    id "java-library"
 }
 
 repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 1.8
-
 dependencies {
-    annotationProcessor 'com.github.h908714124:jbock:2.6.5'
-    compileOnly 'com.github.h908714124:jbock-annotations:2.2'
+    api "com.fasterxml.jackson.core:jackson-databind:2.9.8"
+    implementation "com.github.h908714124:jbock-annotations:2.2"
+    annotationProcessor "com.github.h908714124:jbock:2.6.5"
 }
