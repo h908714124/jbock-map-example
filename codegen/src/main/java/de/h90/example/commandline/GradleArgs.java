@@ -10,6 +10,6 @@ import java.util.List;
 public abstract class GradleArgs {
 
   @JsonGetter
-  @PositionalParameter(repeatable = true)
+  @PositionalParameter
   public abstract List<String> operations();
 }
