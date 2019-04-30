@@ -1,8 +1,4 @@
-# jbock gradle test
-
-Tested with java 11 and gradle 5.
-
-## build and run
+Collecting parameters into a key-value map with [jbock.](https://github.com/h908714124/jbock)
 
 ````sh
 gradle clean run --args='-Xhorse:12 -Xsheep:4'
