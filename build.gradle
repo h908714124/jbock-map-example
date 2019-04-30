@@ -1,2 +1,37 @@
-group "com.github.h908714124"
-version "1.0-SNAPSHOT"
+plugins {
+    id "application"
+}
+
+mainClassName = "de.h90.example.Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly "com.github.h908714124:jbock-annotations:2.2"
+    annotationProcessor "com.github.h908714124:jbock:2.6.6"
+}
+
+compileJava {
+    options.compilerArgs << "-s"
+    options.compilerArgs << "$projectDir/generated/java"
+
+    doFirst {
+        // make sure that directory exists
+        file(new File(projectDir, "/generated/java")).mkdirs()
+    }
+}
+
+clean.doLast {
+    // clean-up directory when necessary
+    file(new File(projectDir, "/generated")).deleteDir()
+}
+
+sourceSets {
+    generated {
+        java {
+            srcDir "$projectDir/generated/java"
+        }
+    }
+}
