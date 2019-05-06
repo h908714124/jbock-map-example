@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     compileOnly "com.github.h908714124:jbock-annotations:2.2"
-    annotationProcessor "com.github.h908714124:jbock:2.6.8"
+    annotationProcessor "com.github.h908714124:jbock:2.6.9"
 }
 
 compileJava {
