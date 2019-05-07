@@ -1,4 +1,4 @@
-package de.h90.example.commandline;
+package de.h90.example;
 
 import net.jbock.CommandLineArguments;
 import net.jbock.Parameter;
@@ -11,13 +11,14 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @CommandLineArguments
-public abstract class GradleArgs {
+abstract class MapArgs {
 
     @Parameter(repeatable = true,
             shortName = 'X',
             mappedBy = MapTokenizer.class,
-            collectedBy = MapCollector.class)
-    public abstract Map<String, String> headers();
+            collectedBy = MapCollector.class,
+            bundleKey = "headers")
+    abstract Map<String, String> headers();
 
     static class MapTokenizer implements Supplier<Function<String, Map.Entry<String, String>>> {
 
