@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 @CommandLineArguments
 abstract class MapArgs {
 
+    /**
+     * A HTTP header
+     */
     @Parameter(repeatable = true,
             shortName = 'X',
             mappedBy = MapTokenizer.class,
