@@ -10,7 +10,10 @@ import java.util.function.Supplier;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-@CommandLineArguments
+/**
+ * This is the program description. There is currently no corresponding bundle property.
+ */
+@CommandLineArguments(programName = "parse-map")
 abstract class MapArgs {
 
     /**
