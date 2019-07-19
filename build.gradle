@@ -2,6 +2,8 @@ plugins {
     id "application"
 }
 
+sourceCompatibility = '1.8'
+
 mainClassName = "de.h90.example.Main"
 
 repositories {
