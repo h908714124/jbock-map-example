@@ -13,6 +13,14 @@ dependencies {
     annotationProcessor "com.github.h908714124:jbock:2.7.1"
 }
 
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'de.h90.example.Main'
+    )
+  }
+}
+
 compileJava {
     options.compilerArgs << "-s"
     options.compilerArgs << "$projectDir/src/main/generated/java"
