@@ -11,9 +11,11 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
- * This is the program description. There is currently no corresponding bundle property.
+ * This is the program description. Its internationalization bundle key is 'jbock.description'.
  */
-@CommandLineArguments(programName = "parse-map")
+@CommandLineArguments(
+    programName = "parse-map",
+    missionStatement = "This is the project's mission. Its internationalization bundle key is 'jbock.mission'.")
 abstract class MapArgs {
 
     /**
