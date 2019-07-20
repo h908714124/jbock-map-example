@@ -1,4 +1,5 @@
 plugins {
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
     id "application"
 }
 
@@ -11,16 +12,15 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.9'
     compileOnly "com.github.h908714124:jbock-annotations:2.2"
     annotationProcessor "com.github.h908714124:jbock:2.7.1"
 }
 
 jar {
-  manifest {
-    attributes(
-      'Main-Class': 'de.h90.example.Main'
-    )
-  }
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
 }
 
 compileJava {
