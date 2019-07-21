@@ -13,5 +13,6 @@ gradle shadowJar
 native-image --no-fallback -H:IncludeResources=de.h90.example.bundle.MyBundle.properties -H:IncludeResources=de.h90.example.bundle.MyBundle_es.properties -jar build/libs/jbock-map-example-all.jar map_example
 ./map_example -Xhorse=12 -Xsheep=4
 ./map_example --help
+./map_example -Duser.language=es --help
 ````
 
