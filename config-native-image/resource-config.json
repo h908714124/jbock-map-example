@@ -1,0 +1,5 @@
+{
+  "resources":[
+    {"pattern": "de/h90/example/bundle/MyBundle.*\\.properties"}
+  ]
+}
