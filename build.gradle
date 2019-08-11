@@ -14,7 +14,7 @@ repositories {
 dependencies {
     implementation 'org.apache.commons:commons-lang3:3.9'
     compileOnly "com.github.h908714124:jbock-annotations:2.2"
-    annotationProcessor "com.github.h908714124:jbock:2.7.2"
+    annotationProcessor "com.github.h908714124:jbock:2.7.3"
 }
 
 jar {
