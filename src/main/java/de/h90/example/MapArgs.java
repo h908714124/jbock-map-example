@@ -2,7 +2,6 @@ package de.h90.example;
 
 import net.jbock.CommandLineArguments;
 import net.jbock.Parameter;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.Map;
@@ -39,9 +38,7 @@ abstract class MapArgs {
             if (tokens.length != 2) {
                 throw new IllegalArgumentException("try '-X Header1=foo -X Header2=bar'");
             }
-            String k = StringUtils.trim(tokens[0]);
-            String v = StringUtils.trim(tokens[1]);
-            return new SimpleImmutableEntry<>(k, v);
+            return new SimpleImmutableEntry<>(tokens[0], tokens[1]);
         }
     }
 
