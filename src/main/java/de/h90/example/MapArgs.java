@@ -1,7 +1,7 @@
 package de.h90.example;
 
 import net.jbock.CommandLineArguments;
-import net.jbock.Parameter;
+import net.jbock.PositionalParameter;
 
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.Map;
@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
  * This is the program description. Its internationalization bundle key is 'jbock.description'.
  */
 @CommandLineArguments(
+        allowPrefixedTokens = true,
         programName = "parse-map",
         missionStatement = "This is the project's mission. Its internationalization bundle key is 'jbock.mission'.")
 abstract class MapArgs {
@@ -22,9 +23,8 @@ abstract class MapArgs {
     /**
      * A HTTP header
      */
-    @Parameter(
+    @PositionalParameter(
             repeatable = true,
-            shortName = 'X',
             mappedBy = MapTokenizer.class,
             collectedBy = MapCollector.class,
             bundleKey = "headers")
@@ -34,9 +34,13 @@ abstract class MapArgs {
 
         @Override
         public Entry<String, String> apply(String s) {
+            if (!s.startsWith("-")) {
+                throw new IllegalArgumentException("tokens must start with '-'");
+            }
+            s = s.substring(1);
             String[] tokens = s.split("[=]", 2);
             if (tokens.length != 2) {
-                throw new IllegalArgumentException("try '-X Header1=foo -X Header2=bar'");
+                throw new IllegalArgumentException("token must be of the form '-a=b'");
             }
             return new SimpleImmutableEntry<>(tokens[0], tokens[1]);
         }
