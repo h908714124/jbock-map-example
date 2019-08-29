@@ -1,5 +1,5 @@
 This sample project shows how to collect
-arbitrary parameters into a [hash map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) with [jbock.](https://github.com/h908714124/jbock).
+arbitrary parameters into a [hash map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) with [jbock.](https://github.com/h908714124/jbock)
 
 ````sh
 gradle run --args='-horse=12 -sheep=4'
