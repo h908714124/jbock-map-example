@@ -31,15 +31,10 @@ abstract class MapArgs {
             bundleKey = "headers")
     abstract Map<String, String> headers();
 
-    // sample mapper
-    static class MapTokenizer implements Supplier<Function<String, Entry<String, String>>> {
+    static class MapTokenizer implements Function<String, Entry<String, String>> {
 
         @Override
-        public Function<String, Entry<String, String>> get() {
-            return this::splitToken;
-        }
-
-        Entry<String, String> splitToken(String s) {
+        public Entry<String, String> apply(String s) {
             String[] tokens = s.split("[=]", 2);
             if (tokens.length != 2) {
                 throw new IllegalArgumentException("try '-X Header1=foo -X Header2=bar'");
@@ -50,7 +45,6 @@ abstract class MapArgs {
         }
     }
 
-    // sample collector
     static class MapCollector<K, V> implements Supplier<Collector<Entry<K, V>, ?, Map<K, V>>> {
 
         @Override
