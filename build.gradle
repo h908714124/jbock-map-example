@@ -12,8 +12,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly "com.github.h908714124:jbock-annotations:2.3"
-    annotationProcessor "com.github.h908714124:jbock:2.7.6"
+    compileOnly "com.github.h908714124:jbock-annotations:2.4"
+    annotationProcessor "com.github.h908714124:jbock:2.7.7"
 }
 
 jar {
