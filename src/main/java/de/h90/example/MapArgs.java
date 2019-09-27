@@ -24,7 +24,6 @@ abstract class MapArgs {
      * A HTTP header
      */
     @PositionalParameter(
-            repeatable = true,
             mappedBy = MapTokenizer.class,
             collectedBy = MapCollector.class,
             bundleKey = "headers")
