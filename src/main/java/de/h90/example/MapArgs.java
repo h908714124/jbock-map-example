@@ -1,7 +1,7 @@
 package de.h90.example;
 
-import net.jbock.CommandLineArguments;
-import net.jbock.PositionalParameter;
+import net.jbock.Command;
+import net.jbock.Param;
 
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.Map;
@@ -11,19 +11,14 @@ import java.util.function.Supplier;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-/**
- * This is the program description. Its internationalization bundle key is 'jbock.description'.
- */
-@CommandLineArguments(
-        allowPrefixedTokens = true,
-        programName = "parse-map",
-        missionStatement = "This is the project's mission. Its internationalization bundle key is 'jbock.mission'.")
+
+@Command("parse-map")
 abstract class MapArgs {
 
     /**
      * A HTTP header
      */
-    @PositionalParameter(
+    @Param(value = 1,
             mappedBy = MapTokenizer.class,
             collectedBy = MapCollector.class,
             bundleKey = "headers")
@@ -53,4 +48,3 @@ abstract class MapArgs {
         }
     }
 }
-

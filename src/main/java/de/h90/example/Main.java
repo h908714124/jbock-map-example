@@ -1,16 +1,13 @@
 package de.h90.example;
 
-import java.io.InputStream;
+import java.util.ResourceBundle;
 
 public class Main {
 
     public static void main(String[] argv) {
-        InputStream messages = Main.class.getResourceAsStream("/de/h90/example/bundle/MyBundle_"
-                + System.getProperty("user.language")
-                + ".properties");
+        ResourceBundle messages = ResourceBundle.getBundle("de/h90/example/bundle/MyBundle");
         MapArgs args = MapArgs_Parser.create()
-                .withIndent(4)
-                .withMessages(messages)
+                .withResourceBundle(messages)
                 .parseOrExit(argv);
         System.out.println(args.headers());
     }

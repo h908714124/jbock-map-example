@@ -2,9 +2,9 @@ This sample project shows how to collect
 parameters into a hash map with [jbock.](https://github.com/h908714124/jbock)
 
 ````sh
-gradle run --args='-horse=12 -sheep=4'
-gradle run --args='--help'
-gradle -Duser.language=es run --args='--help'
+./gradlew run --args='-- -horse=12 -sheep=4'
+./gradlew run --args='--help'
+./gradlew -Duser.language=es run --args='--help'
 ````
 
 Or [compile to native](https://github.com/oracle/graal/releases) first:
