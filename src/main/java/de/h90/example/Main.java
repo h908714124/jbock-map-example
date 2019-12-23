@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] argv) {
         ResourceBundle messages = ResourceBundle.getBundle("de/h90/example/bundle/MyBundle");
-        MapArgs args = MapArgs_Parser.create()
+        MapArgs args = new MapArgs_Parser()
                 .withResourceBundle(messages)
                 .parseOrExit(argv);
         System.out.println(args.headers());
