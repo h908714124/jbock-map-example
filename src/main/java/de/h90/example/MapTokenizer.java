@@ -4,8 +4,9 @@ import java.util.AbstractMap;
 import java.util.Map;
 import java.util.function.Function;
 
-class MapTokenizer {
+class MapTokenizer implements Function<String, Map.Entry<String, String>> {
 
+    @Override
     public Map.Entry<String, String> apply(String s) {
         if (!s.startsWith("-")) {
             throw new IllegalArgumentException("tokens must start with '-'");
