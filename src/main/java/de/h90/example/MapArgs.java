@@ -3,6 +3,7 @@ package de.h90.example;
 import net.jbock.Command;
 import net.jbock.Param;
 
+import java.util.List;
 import java.util.Map;
 
 
@@ -14,8 +15,10 @@ abstract class MapArgs {
      */
     @Param(value = 1,
             mappedBy = MapTokenizer.class,
-            collectedBy = MapCollector.class,
             bundleKey = "headers")
-    abstract Map<String, String> headers();
+    abstract List<Map.Entry<String, String>> headers();
 
+    Map<String, String> headersAsMap() {
+        return headers().stream().collect(new MapCollector<String, String>().get());
+    }
 }

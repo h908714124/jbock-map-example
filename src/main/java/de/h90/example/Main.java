@@ -9,6 +9,6 @@ public class Main {
         MapArgs args = new MapArgs_Parser()
                 .withResourceBundle(messages)
                 .parseOrExit(argv);
-        System.out.println(args.headers());
+        System.out.println(args.headersAsMap());
     }
 }

@@ -1,9 +1,12 @@
 package de.h90.example;
 
+import net.jbock.Mapper;
+
 import java.util.AbstractMap;
 import java.util.Map;
 import java.util.function.Function;
 
+@Mapper
 class MapTokenizer implements Function<String, Map.Entry<String, String>> {
 
     @Override
